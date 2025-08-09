@@ -1,69 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kohaq Education</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Typewriter effect */
+    .typewriter {
+      overflow: hidden;
+      border-right: .15em solid #2563eb;
+      white-space: nowrap;
+      animation: typing 3s steps(20, end), blink-caret .75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #2563eb }
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <header class="bg-white shadow">
-    <div class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Kohaq Education</h1>
-      <nav class="space-x-4">
-        <a href="#about" class="hover:underline">About</a>
-        <a href="#courses" class="hover:underline">Courses</a>
-        <a href="#schedule" class="hover:underline">Schedule</a>
-        <a href="#contact" class="hover:underline">Contact</a>
+<body class="bg-gray-50 text-gray-800 scroll-smooth">
+
+  <!--Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+       <img src="Kohaq.png" alt="Kohaq Logo" 
+     style="width: 150px; height: 70px;" 
+     data-aos="fade-left">
+      <nav class="space-x-4 hidden md:block">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#courses" class="hover:text-blue-600">Courses</a>
+        <a href="#schedule" class="hover:text-blue-600">Schedule</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-6 py-12">
-    <!-- Hero -->
-    <section id="hero" class="grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h2 class="text-4xl font-extrabold mb-4">Upskill with Kohaq</h2>
-        <p class="mb-6">Join our hands-on courses in Web Development, Data Analytics, and AI. Learn from industry mentors and build real projects.</p>
-        <a href="#register" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">Register Now</a>
+  <!-- Hero -->
+  <section id="hero" class="bg-gradient-to-r from-blue-50 to-blue-100 py-16">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+      <div data-animate="fade-up">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4 typewriter">KOHAQ Education</h2>
+        <p class="mb-6 text-lg">Empowering learners with skills in Web Development, Data, and AI through hands-on, mentor-led programs.</p>
+        <a href="#register" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">Join Now</a>
       </div>
-      <div class="bg-white rounded-lg p-6 shadow">
-        <h3 class="text-lg font-semibold mb-2">Next Cohort</h3>
-        <p class="mb-4">Starts: <strong>August 15, 2025</strong></p>
-        <ul class="space-y-2">
-          <li>• Web Development — 6 weeks</li>
-          <li>• Data Analytics — 4 weeks</li>
-          <li>• Intro to AI — 5 weeks</li>
-        </ul>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About -->
-    <section id="about" class="mt-12">
-      <h3 class="text-2xl font-bold mb-4">About</h3>
-      <p>Kohaq Education offers interactive, cohort-based courses designed to equip learners with industry-ready skills through hands-on projects and expert guidance.</p>
-    </section>
+  <!-- About -->
+  <section id="about" class="py-16">
+    <div class="max-w-6xl mx-auto px-6" data-animate="fade-up">
+      <h3 class="text-3xl font-bold mb-4">About Us</h3>
+      <p>At Kohaq Education, we deliver interactive, cohort-based courses designed for the modern job market. Learn by building real projects with expert guidance.</p>
+    </div>
+  </section>
 
-    <!-- Courses -->
-    <section id="courses" class="mt-8">
-      <h3 class="text-2xl font-bold mb-4">Courses</h3>
-      <div class="grid sm:grid-cols-2 gap-4">
-        <div class="p-4 bg-white rounded shadow">
-          <h4 class="font-semibold">Web Development</h4>
-          <p>HTML, CSS, JavaScript, React, and real-world projects.</p>
+  <!-- Courses -->
+  <section id="courses" class="bg-gray-100 py-16">
+    <div class="max-w-6xl mx-auto px-6" data-animate="fade-up">
+      <h3 class="text-3xl font-bold mb-6">Courses</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition" data-animate="fade-up">
+          <h4 class="font-semibold text-xl mb-2">Web Development</h4>
+          <p>Master HTML, CSS, JavaScript, and React through real-world projects.</p>
         </div>
-        <div class="p-4 bg-white rounded shadow">
-          <h4 class="font-semibold">Data Analytics</h4>
-          <p>Pandas, matplotlib, storytelling with data, dashboards.</p>
+        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition" data-animate="fade-up" style="animation-delay: 0.2s;">
+          <h4 class="font-semibold text-xl mb-2">Data Analytics</h4>
+          <p>Learn Python, Pandas, and storytelling with data to build insightful dashboards.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition" data-animate="fade-up" style="animation-delay: 0.4s;">
+          <h4 class="font-semibold text-xl mb-2">AI Foundations</h4>
+          <p>Explore machine learning concepts and build AI-powered applications.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Schedule -->
-    <section id="schedule" class="mt-8">
-      <h3 class="text-2xl font-bold mb-4">Schedule</h3>
-      <table class="w-full bg-white rounded shadow">
-        <thead class="bg-gray-100">
+  <!-- Schedule -->
+  <section id="schedule" class="py-16">
+    <div class="max-w-6xl mx-auto px-6" data-animate="fade-up">
+      <h3 class="text-3xl font-bold mb-6">Schedule</h3>
+      <table class="w-full bg-white rounded shadow overflow-hidden">
+        <thead class="bg-blue-50">
           <tr>
             <th class="p-3 text-left">Week</th>
             <th class="p-3 text-left">Focus</th>
@@ -83,26 +105,77 @@
           </tr>
         </tbody>
       </table>
-    </section>
+    </div>
+  </section>
 
-    <!-- Register -->
-    <section id="register" class="mt-8">
-      <h3 class="text-2xl font-bold mb-4">Register</h3>
-      <p class="mb-4">Reserve your seat by contacting us directly.</p>
-      <a class="inline-block bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700" href="mailto:register@kohaq.com?subject=Course%20Registration">Register via Email</a>
-    </section>
+<!-- Register -->
+<section id="register" class="bg-gradient-to-r from-green-50 to-green-100 py-16">
+  <div class="max-w-6xl mx-auto px-6 text-center" data-animate="fade-up">
+    <h3 class="text-3xl font-bold mb-4">Register Today</h3>
+    <p class="mb-6">Reserve your seat by entering your email below.</p>
 
-    <!-- Contact -->
-    <section id="contact" class="mt-12">
-      <h3 class="text-2xl font-bold mb-4">Contact</h3>
+    <form action="mailto:register@kohaq.com" method="post" enctype="text/plain" class="flex flex-col sm:flex-row justify-center gap-4">
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Enter your email" 
+        required
+        class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 w-full sm:w-80"
+      >
+      <button 
+        type="submit" 
+        class="bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:bg-green-700">
+        Register
+      </button>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="py-16">
+    <div class="max-w-6xl mx-auto px-6" data-animate="fade-up">
+      <h3 class="text-3xl font-bold mb-4">Contact Us</h3>
       <p>Email: hello@kohaq.com</p>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- Footer -->
   <footer class="bg-white py-6 mt-12">
-    <div class="max-w-6xl mx-auto px-6 text-sm text-gray-600">
+    <div class="max-w-6xl mx-auto px-6 text-sm text-gray-600 text-center">
       © Kohaq Education 2025
     </div>
   </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const animateElements = document.querySelectorAll("[data-animate]");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-fadeInUp");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    animateElements.forEach(el => {
+      observer.observe(el);
+    });
+
+    // Add fadeInUp animation via Tailwind plugin replacement
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .animate-fadeInUp {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        transition: all 0.6s ease-out;
+      }
+      [data-animate] {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
 </body>
 </html>
